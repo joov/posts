@@ -1,0 +1,32 @@
+%% Graph 2: Layered Context Architecture -- Three layers of context with enterprise examples
+
+flowchart LR
+    subgraph Global["🌐 Global Layer — permanent"]
+        direction LR
+        G1["🏢 Company identity & values"]
+        G2["📏 Coding standards & policies"]
+        G3["🎨 Tone, style, compliance rules"]
+    end
+
+    subgraph Project["📁 Project Layer — project lifetime"]
+        direction LR
+        P1["🎯 Project goals & status"]
+        P2["📊 Domain knowledge & research"]
+        P3["👥 Stakeholders & decisions"]
+    end
+
+    subgraph Task["⚡ Task Layer — per session"]
+        direction LR
+        T1["📄 Current documents & data"]
+        T2["🔧 Active tools & APIs"]
+        T3["💬 Conversation history"]
+    end
+
+    Global --> Project --> Task
+
+    Task --> LLM["🤖 LLM Context Window"]
+
+    style Global fill:#e8f4fd,stroke:#2980b9,color:#333
+    style Project fill:#fef9e7,stroke:#f39c12,color:#333
+    style Task fill:#fdedec,stroke:#e74c3c,color:#333
+    style LLM fill:#eafaf1,stroke:#27ae60,color:#333,stroke-width:3px

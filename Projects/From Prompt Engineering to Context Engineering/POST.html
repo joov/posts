@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>POST.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="from-prompt-engineering-to-context-engineering">From Prompt Engineering to Context Engineering</h1>
+<p><em>Why the smartest AI teams stopped optimizing prompts — and what they're building instead.</em></p>
+<hr>
+<h2 id="the-prompt-illusion">The Prompt Illusion</h2>
+<p>&quot;Prompt Engineer&quot; was the hottest job title of 2024. Bootcamps charged thousands to teach people how to write better instructions for AI. LinkedIn was flooded with &quot;10x your productivity with these prompt templates.&quot;</p>
+<p>Today, the role is quietly disappearing from job boards.</p>
+<p>Not because AI got worse. Because the best teams realized they were solving the wrong problem.</p>
+<p>Philipp Schmid, Senior AI Developer Relations at Google DeepMind, put it bluntly: <strong>&quot;Most agent failures are not model failures. They are context failures.&quot;</strong> The model isn't broken. The information environment around it is.</p>
+<hr>
+<h2 id="what-changed">What Changed</h2>
+<p>To understand the shift, look at how we use AI systems today versus two years ago.</p>
+<p>In 2023, a prompt <em>was</em> the product. You typed a question, you got an answer. The quality of that answer depended almost entirely on how well you phrased your request. Prompt engineering was the right skill for that world.</p>
+<p>In 2026, the picture looks different. AI agents work in loops. They use tools, query databases, remember previous interactions, and make decisions across dozens of steps — often without human intervention between them. An agent scheduling a meeting might check your calendar, look up the sender's history, assess their priority, pick a time slot, and draft a response.</p>
+<p>In that world, the initial prompt is just one input among many. If the agent has stale calendar data at step 5, no amount of prompt optimization will fix the output at step 12.</p>
+<p>The question has shifted:</p>
+<table>
+<thead>
+<tr>
+<th>Prompt Era</th>
+<th>Context Era</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&quot;How do we phrase this better?&quot;</td>
+<td>&quot;What should the agent know right now?&quot;</td>
+</tr>
+<tr>
+<td>&quot;Should we add role prompting?&quot;</td>
+<td>&quot;Which context sources should be included or excluded?&quot;</td>
+</tr>
+<tr>
+<td>&quot;Can we make the prompt longer?&quot;</td>
+<td>&quot;Can we compress, isolate, and refresh state?&quot;</td>
+</tr>
+<tr>
+<td>&quot;Why did the model ignore the instruction?&quot;</td>
+<td>&quot;What conflicting context overrode or diluted it?&quot;</td>
+</tr>
+</tbody>
+</table>
+<p>[Graph: Prompt-Era vs. Context-Era]</p>
+<hr>
+<h2 id="what-decision-makers-need-to-know">What Decision-Makers Need to Know</h2>
+<p>In June 2025, Shopify CEO Tobi Lütke coined the term that captured this shift. He called it <strong>context engineering</strong> — &quot;the art of providing all the context for the task to be plausibly solvable by the LLM.&quot;</p>
+<p>Within days, Andrej Karpathy (former AI lead at Tesla, co-founder of OpenAI) amplified it, calling context engineering &quot;the delicate art and science of filling the context window with just the right information for the next step.&quot; Simon Willison, co-creator of the Django web framework, predicted the term would stick because the inferred meaning of &quot;prompt engineering&quot; had drifted too far from reality. People thought it meant &quot;typing cleverly into a chatbot.&quot;</p>
+<p>Schmid formalized the definition: <strong>Context engineering is the discipline of designing dynamic systems that deliver the right information, with the right tools, in the right format, at the right time.</strong></p>
+<p>Two things matter for AI-leaders here.</p>
+<p><strong>First: context is a finite resource.</strong> It's tempting to think that more context means better results. It doesn't. Anthropic's engineering team describes an <strong>&quot;attention budget&quot;</strong> — the model's ability to recall and use information degrades as the context window fills up. There are diminishing marginal returns. The goal is not maximum context. It's the <em>smallest possible set of high-signal information</em> that makes the task solvable.</p>
+<p><strong>Second: this is now engineering, not wordsmithing.</strong> Karpathy calls it both science and art — science because it involves measurable components like task descriptions, few-shot examples, RAG pipelines, tool definitions, and memory management. Art because there's still intuition involved in understanding what Karpathy calls &quot;LLM psychology.&quot;</p>
+<p>Here's the analogy that captures it best:</p>
+<p><strong>Prompting is like giving a new employee an assignment.</strong> Context engineering is like setting up their entire workspace — with the right tools, documents, access rights, and contacts they need to complete that assignment independently. The assignment (prompt) is just one part. The environment (context) determines whether they succeed.</p>
+<hr>
+<h2 id="three-strategic-implications">Three Strategic Implications</h2>
+<h3 id="context-is-the-new-competitive-layer">Context Is the New Competitive Layer</h3>
+<p>If two companies use the same model but one has a better context architecture, that company will get better results. The model is a commodity. The context is the differentiator.</p>
+<p>The architecture that practitioners keep converging on is <strong>layered context</strong> — three tiers of information with decreasing scope and increasing specificity:</p>
+<p>[Graph: Layered Context Architecture]</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Contains</th>
+<th>Lifespan</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Global</strong></td>
+<td>Identity, standards, policies</td>
+<td>Permanent</td>
+<td>Company rules, compliance, tone</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td>Domain knowledge, goals, status</td>
+<td>Project duration</td>
+<td>Research, stakeholder decisions</td>
+</tr>
+<tr>
+<td><strong>Task</strong></td>
+<td>Current data, active tools</td>
+<td>Per session</td>
+<td>Documents, API responses, chat history</td>
+</tr>
+</tbody>
+</table>
+<p>This isn't theoretical. Multiple practitioners have independently arrived at this pattern. Teresa Torres, author of <em>Continuous Discovery Habits</em>, runs her entire business with two Claude Code terminals and a note-taking app, organized into exactly these three layers. Carl Vellotti published his &quot;Product OS&quot; — a complete workspace structure for product managers that mirrors this architecture with folders for global context, projects, workflows, and persistent knowledge.</p>
+<p>The pattern also has deep roots. Researchers have noted structural parallels to the three-store model in cognitive psychology: working memory, episodic memory, and semantic memory. We're essentially building the same architecture for machines that evolution built for human cognition.</p>
+<h3 id="your-ai-investment-must-shift">Your AI Investment Must Shift</h3>
+<p>Most organizations are still spending their AI budget on model access, prompt template libraries, and fine-tuning experiments. That's like investing in better ink while ignoring the printing press.</p>
+<p>The investment needs to move toward:</p>
+<ul>
+<li><strong>Context architecture</strong> — How is information structured, versioned, and loaded into the model?</li>
+<li><strong>Persistent knowledge</strong> — What does the agent remember across sessions? What does it forget? How is prior context preserved and recalled?</li>
+<li><strong>Tool integration</strong> — Which external systems can the agent access, and how is their output formatted?</li>
+<li><strong>Instrumentation</strong> — Can you see what the model actually received when it made a decision?</li>
+</ul>
+<p>Schmid illustrated this with a simple example: the same email — &quot;Hey, just checking if you're around for a quick sync tomorrow&quot; — produces a generic, useless response with poor context, but a specific, actionable response when the model has access to your calendar, email history, contact list, and scheduling tools. Same model. Same prompt. Radically different output. The difference is entirely in the context.</p>
+<h3 id="prompt-engineering-isnt-dead--it-got-promoted">Prompt Engineering Isn't Dead — It Got Promoted</h3>
+<p>Prompt engineering still matters. Crafting clear instructions, finding the right level of specificity, structuring system prompts — all of this remains valuable work.</p>
+<p>But it's now <strong>one layer in a larger stack</strong>. Optimizing only that layer is like redecorating the wallpaper while ignoring the structural integrity of the building.</p>
+<p>If you're familiar with the <strong>MECE principle</strong> from strategy consulting — mutually exclusive, collectively exhaustive — that's essentially what good context architecture demands: no overlaps, no gaps. For every AI initiative, decision-makers should be asking five questions:</p>
+<ol>
+<li>Is the context <strong>relevant</strong> to the task at hand?</li>
+<li>Is it <strong>sufficient</strong> — does the model have what it needs?</li>
+<li>Is it <strong>isolated</strong> — are different workstreams properly separated?</li>
+<li>Is it <strong>economical</strong> — are we staying within the attention budget?</li>
+<li>Is it <strong>traceable</strong> — can we reconstruct what the model saw when something went wrong?</li>
+</ol>
+<p>If your team can't answer these questions, you're not doing context engineering. You're guessing.</p>
+<hr>
+<h2 id="what-to-do-tomorrow">What to Do Tomorrow</h2>
+<p>You don't need to rebuild your AI stack overnight. But three steps will immediately sharpen your results:</p>
+<p><strong>Run a context audit.</strong> Ask your AI team: what information does the model actually see when it makes a decision? Most teams cannot answer this question. They know what the prompt says, but they don't know what the full context window contains — the retrieved documents, the tool outputs, the conversation history, the system instructions. Map it. You'll find surprises.</p>
+<p><strong>Separate stable from volatile.</strong> Business rules, tone guidelines, and compliance policies should not live in the same bucket as fresh API responses and real-time data. Stable context should be compact and persistent. Volatile context should be time-scoped and replaceable. Mixing them is how you get contradictory outputs.</p>
+<p><strong>Measure instead of guessing.</strong> If you're not monitoring cost per query, response latency, tool call patterns, and failure modes, you're flying blind. Context engineering without instrumentation is just hope with extra steps.</p>
+<hr>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p>The question is no longer &quot;How do I write the perfect prompt?&quot; The question is: <strong>&quot;What information environment does my AI system need to work reliably?&quot;</strong></p>
+<p>Those who understand this will stop polishing prompts and start building context architecture. Those who don't will keep wondering why their AI demos work beautifully but their production systems fail quietly.</p>
+<p>The prompt got the AI revolution started. The context will determine who wins it.</p>
+<hr>
+<h2 id="references">References</h2>
+<ul>
+<li>Anthropic Applied AI Team, &quot;Effective Context Engineering for AI Agents,&quot; anthropic.com, September 2025</li>
+<li>Philipp Schmid, &quot;The New Skill in AI is Not Prompting, It's Context Engineering,&quot; philschmid.de, June 2025</li>
+<li>Tobi Lütke, post on X, June 18, 2025</li>
+<li>Simon Willison, &quot;Context Engineering,&quot; simonwillison.net, June 2025</li>
+<li>Andrej Karpathy, &quot;Software 3.0,&quot; YC AI Startup School / Latent Space, June 2025</li>
+<li>Ilia Ilinskii, &quot;7 Steps to Context Engineering,&quot; rephrase-it.com, March 2026</li>
+<li>Petter Chr. Bjelland, &quot;Three Layers of Context for Useful AI,&quot; Medium, 2025</li>
+<li>Peter Yang / Teresa Torres, &quot;Automate Your Life with Claude Code,&quot; CreatorEconomy, December 2025</li>
+<li>Ivan Smetannikov, &quot;Design Patterns for Long-Term Memory in LLM-Powered Architectures,&quot; serokell.io, December 2025</li>
+<li>Carl Vellotti, &quot;Carl's Product OS,&quot; github.com/carlvellotti/carls-product-os</li>
+<li>&quot;Context Engineering,&quot; Wikipedia (de), March 2026</li>
+</ul>
+
+</body>
+</html>

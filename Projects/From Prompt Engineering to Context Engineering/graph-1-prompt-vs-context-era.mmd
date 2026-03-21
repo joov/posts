@@ -1,0 +1,25 @@
+%% Graph 1: Prompt-Era vs. Context-Era -- What shifts when you move from prompting to context engineering
+
+flowchart LR
+    subgraph PE["🅿️ Prompt Engineering Era"]
+        direction TB
+        PE1["✏️ Craft the perfect prompt"]
+        PE2["💬 Single interaction"]
+        PE3["🔄 Retry with better wording"]
+        PE4["❓ Why did the model ignore me?"]
+        PE1 --> PE2 --> PE3 --> PE4
+    end
+
+    subgraph CE["🏗️ Context Engineering Era"]
+        direction TB
+        CE1["📐 Design the information environment"]
+        CE2["⚙️ Multi-step agent workflows"]
+        CE3["🗂️ Curate, compress, isolate context"]
+        CE4["🔍 What conflicting context diluted it?"]
+        CE1 --> CE2 --> CE3 --> CE4
+    end
+
+    PE -- "The Shift" --> CE
+
+    style PE fill:#f9f0f0,stroke:#c0392b,color:#333
+    style CE fill:#edf7ed,stroke:#27ae60,color:#333
