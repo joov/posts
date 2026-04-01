@@ -9,8 +9,8 @@ compatibility: opencode
 
 Given a project name (passed as argument):
 
-1. Create folder `Projects/<name>/`
-2. Create `Projects/<name>/STATUS.md` with the following template:
+1. Create folder `Posts/<name>/`
+2. Create `Posts/<name>/STATUS.md` with the following template:
 
 ```markdown
 # <name>

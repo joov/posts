@@ -14,7 +14,7 @@ I am a Principal Data & AI Strategy consultant and CISO. I look at new developen
 This is a personal project management system to create medium posts and designed to work with Opencode. It organizes:
 
 - **Tasks/** - Active work and backlog items
-- **Projects/** - Individual projects each containing a medium post
+- **Posts/** - Individual Posts each containing a medium post
 - **Workflows/** - Repeatable processes and playbooks
 - **Knowledge/** - Reference materials, research, and people notes
 - **Templates/** - Reusable document templates
@@ -23,7 +23,7 @@ This is a personal project management system to create medium posts and designed
 
 ```
 Tasks/           → Active tasks and backlog
-Projects/        → individual projects each creating a post for medium
+Posts/           → individual posts each creating a post for medium
 Knowledge/       → Reference, Research, People notes
 Templates/       → Document templates
 Tools/           → Scripts and utilities

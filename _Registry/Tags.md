@@ -15,9 +15,9 @@ Tags used to organize content across the system.
 - `#p1` - Important / Should do
 - `#p2` - Nice to have
 
-## Project Tags
-<!-- TODO: Add tags for your projects -->
-- `#project-name` - Description
+## Post Tags
+<!-- TODO: Add tags for your post -->
+- `#post-name` - Description
 
 ## Area Tags
 <!-- TODO: Add tags for different work areas -->

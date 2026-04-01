@@ -286,7 +286,7 @@ Ein oeffentliches GitHub-Repository, das ein "Personal Operating System" fuer Cl
 | `CLAUDE.md` | Einstiegspunkt. Claude liest dies automatisch bei jedem Gespraech. |
 | `GOALS.md` | Identitaet, Verantwortlichkeiten, aktuelle Ziele |
 | `Tasks/` | Backlog -> Active -> Archive |
-| `Projects/` | Einzelprojekte mit eigenem Kontext und Research |
+| `Posts/` | Einzelprojekte mit eigenem Kontext und Research |
 | `Workflows/` | Wiederholbare Prozesse |
 | `Knowledge/` | Persistentes Referenzmaterial ueber Projekte hinweg |
 | `Templates/` | Dokumentvorlagen fuer konsistente Outputs |
@@ -295,10 +295,9 @@ Ein oeffentliches GitHub-Repository, das ein "Personal Operating System" fuer Cl
 
 ### Key Concepts
 
-- **Projects vs. Workflows:** Projects haben ein Ende und werden archiviert. Workflows sind wiederholbar.
 - **Templates vs. Workflows:** Templates definieren die Struktur des Outputs. Workflows definieren den Prozess.
-- **Knowledge vs. Project Research:** Knowledge ist persistent und projektuebergreifend. Project Research ist scope-spezifisch und wird mit dem Projekt archiviert.
+- **Knowledge vs. Project Research:** Knowledge ist persistent und projektuebergreifend. Project Research ist scope-spezifisch und wird mit dem Post archiviert.
 
 ### Relevanz
 
-Lebendes Beispiel eines Knowledge Operating Systems. Zeigt, dass Context Engineering nicht nur Theorie ist, sondern bereits von Praktikern als Arbeitsorganisation umgesetzt wird. Die Struktur spiegelt das Layered-Context-Muster wider: Global (CLAUDE.md, GOALS.md) -> Projekt (Projects/) -> Aufgabe (Tasks/, Workflows/).
+Lebendes Beispiel eines Knowledge Operating Systems. Zeigt, dass Context Engineering nicht nur Theorie ist, sondern bereits von Praktikern als Arbeitsorganisation umgesetzt wird. Die Struktur spiegelt das Layered-Context-Muster wider: Global (CLAUDE.md, GOALS.md) -> Post (Posts/) -> Aufgabe (Tasks/, Workflows/).
