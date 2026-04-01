@@ -11,9 +11,8 @@ Tasks currently in progress.
 
 ## In Progress
 
-<!-- TODO: Add your active tasks below -->
-
-- [ ] <!-- Task description --> - Started: <!-- date -->
+- [ ] Post 2: "Something dangerous is happening" - Started: 2026-03-28
+  - Next step: `/review` to review and finalize
 
 ## Blocked
 

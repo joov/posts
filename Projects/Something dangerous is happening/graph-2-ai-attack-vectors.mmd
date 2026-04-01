@@ -1,0 +1,45 @@
+%% Graph 2: The Three AI-Enabled Attack Vectors
+%% Shows how AI acts as a force multiplier across three distinct attack surfaces:
+%% (1) Social engineering at scale, (2) Prompt injection via the web,
+%% (3) LOTAIL — Living Off the AI Land (weaponizing enterprise AI platforms).
+
+flowchart TD
+    title["🤖 AI as Attack Force Multiplier
+    Three ways AI changes the threat landscape — simultaneously"]
+
+    title --> AI
+
+    AI["🧠 AI Capability
+    Same technology — opposite direction"]
+
+    AI --> SE["🎭 Social Engineering at Scale
+    • Hyper-personalized phishing
+    • Deepfake identity fraud
+    • AI-scripted extortion
+    • Skill floor collapsed"]
+
+    AI --> PI["🕸️ Prompt Injection via the Web
+    • Hidden instructions in HTML
+    • Agent reads, agent complies
+    • 22 techniques observed in wild
+    • No existing control framework covers this"]
+
+    AI --> LO["🔓 LOTAIL — Living Off the AI Land
+    • Attacker uses your own AI assistant
+    • Reads runbooks, maps networks
+    • Insider threat amplified
+    • Valid credentials = full reconnaissance"]
+
+    SE --> T1["👤 Humans targeted"]
+    PI --> T2["🤖 AI agents hijacked"]
+    LO --> T3["🏢 Enterprise infrastructure exposed"]
+
+    classDef titleStyle fill:#e8f4fb,stroke:#2980b9,stroke-width:2px,color:#1a3a4a,font-size:15px
+    classDef core fill:#2c3e50,stroke:#1a252f,color:#fff,font-weight:bold,font-size:14px
+    classDef vector fill:#2980b9,stroke:#1a5276,color:#fff,font-size:13px
+    classDef impact fill:#d6eaf8,stroke:#5dade2,color:#1a3a4a,font-size:12px
+
+    class title titleStyle
+    class AI core
+    class SE,PI,LO vector
+    class T1,T2,T3 impact

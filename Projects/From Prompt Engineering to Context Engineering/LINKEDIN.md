@@ -2,7 +2,7 @@
 
 ## Main LinkedIn Post
 
-Is Prompt Engineering dead? 🪦
+**Is Prompt Engineering dead? 🪦
 
 The real competitive advantage in AI is shifting somewhere else:
 

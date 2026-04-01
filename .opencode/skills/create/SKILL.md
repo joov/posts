@@ -1,5 +1,5 @@
 ---
-name: new-project
+name: create
 description: Create a new project folder for a new post
 license: MIT
 compatibility: opencode
@@ -32,4 +32,4 @@ Given a project name (passed as argument):
 
 ## When to use me
 
-Use this when a new project/post needs to be created. The user provides the project name as the first argument, e.g. `/new-project My Amazing Post`.
+Use this when a new project/post needs to be created. The user provides the project name as the first argument, e.g. `/create My Amazing Post`.

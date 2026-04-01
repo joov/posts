@@ -42,7 +42,7 @@ _temp/           → Scratch space
 | `/write` | write the post using plan and graphs | write |
 | `/review` | review article for structure, clarity, and accuracy | review |
 | `/summarize` | create a LinkedIn abstract with hooks and emojis | summarize |
-| `/new-project [name]` | create new project for a new post | new-project |
+| `/create [name]` | create new project for a new post | create |
 
 Always update STATUS.md after executing a command or skill
 

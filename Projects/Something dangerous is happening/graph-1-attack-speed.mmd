@@ -1,0 +1,44 @@
+%% Graph 1: Attack Speed Acceleration
+%% Shows how AI has compressed time-to-exfiltration for the fastest 25% of attacks:
+%% from 285 minutes in 2024 down to 72 minutes in 2025 — a 4x acceleration.
+%% The defender's reaction window shrinks as attack speed increases.
+
+flowchart TD
+    title["⚡ AI Compresses the Attack Lifecycle
+    Fastest 25% of breaches — time from initial access to data exfiltration"]
+
+    title --> A
+
+    A["🎯 Attacker gains access"]
+
+    A --> B2024["📅 2024
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    285 minutes (~4.75 hours)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━"]
+
+    A --> B2025["📅 2025
+    ━━━━━━━━━━━
+    72 minutes (~1.2 hours)
+    ━━━━━━━━━━━"]
+
+    B2024 --> C["📤 Data exfiltrated"]
+    B2025 --> C
+
+    C --> D["⚠️ 90%+ of breaches enabled by preventable gaps
+    — not sophisticated zero-days.
+    AI finds them before teams can close them.
+    Source: Unit 42 Global IR Report 2026"]
+
+    classDef titleStyle fill:#fff8f0,stroke:#c8b89a,stroke-width:2px,color:#3d2b1f,font-size:15px
+    classDef attacker fill:#8b4513,stroke:#5a2d0c,color:#fff,font-weight:bold
+    classDef bar2024 fill:#c8b89a,stroke:#a0855a,color:#3d2b1f,font-weight:bold
+    classDef bar2025 fill:#7a3b10,stroke:#4a1e06,color:#fff,font-weight:bold
+    classDef outcome fill:#efebe9,stroke:#a0855a,color:#3d2b1f
+    classDef note fill:#fff3e0,stroke:#e0a040,color:#5a3d00,font-style:italic
+
+    class title titleStyle
+    class A attacker
+    class B2024 bar2024
+    class B2025 bar2025
+    class C outcome
+    class D note
