@@ -1,0 +1,32 @@
+%% Graph 2: The Exfiltration Channel Shift
+%% Shows how data exfiltration has moved from file-based vectors to prompt-based AI interactions
+
+flowchart LR
+    subgraph OLD["📁 Yesterday's Exfiltration Vectors"]
+        direction TB
+        E1["📧 Email attachments"]
+        E2["💾 USB drives"]
+        E3["☁️ Unauthorised cloud sync"]
+        E4["🖨️ Print / screenshot"]
+    end
+
+    subgraph NEW["💬 Today's Dominant Vector"]
+        direction TB
+        N1["🤖 GenAI prompts<br>#1 corporate-to-personal<br>exfiltration channel<br>— 32% of all outbound data"]
+        N2["📋 Clipboard paste<br>Overtook file transfers<br>as top exfiltration method"]
+        N3["👤 Personal AI accounts<br>82% of GenAI usage via<br>unsanctioned personal logins"]
+    end
+
+    OLD -->|"DLP coverage: ✅ HIGH"| COVERED["🛡️ Well covered<br>by legacy DLP"]
+    NEW -->|"DLP coverage: ❌ LOW"| MISSED["🕳️ Largely invisible<br>to legacy DLP"]
+
+    classDef oldbox fill:#b5cce0,stroke:#4a7fa0,color:#0a1a2a,font-weight:bold
+    classDef newbox fill:#3b6ea8,stroke:#1a3d6b,color:#fff,font-weight:bold
+    classDef covered fill:#5a8a5a,stroke:#2d5c2d,color:#fff,font-weight:bold
+    classDef missed fill:#c0392b,stroke:#7b241c,color:#fff,font-weight:bold
+    classDef subg fill:#e8f0f8,stroke:#b0c8e0,color:#0a1a2a
+
+    class E1,E2,E3,E4 oldbox
+    class N1,N2,N3 newbox
+    class COVERED covered
+    class MISSED missed

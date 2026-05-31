@@ -1,0 +1,15 @@
+%% Graph 1: The Three Blind Spots
+%% Shows the three gaps traditional DLP cannot cover in an AI-first company
+
+flowchart TD
+    DLP["🛡️ Traditional DLP<br>Watches files, channels,<br>and known patterns"]
+
+    DLP -.->|"❌ Cannot see"| B1["💬 Blind Spot 1<br>The Prompt<br>Data leaves as a conversation,<br>not a file"]
+    DLP -.->|"❌ Cannot detect"| B2["🧠 Blind Spot 2<br>The Context<br>Strategic data has no<br>keyword or pattern to match"]
+    DLP -.->|"❌ No model for"| B3["🤖 Blind Spot 3<br>The AI Agent<br>Autonomous data actor —<br>not a human, not a file server"]
+
+    classDef blind fill:#d94f3b,stroke:#9b2a1a,color:#fff,font-weight:bold
+    classDef dlp fill:#5c4a32,stroke:#3a2c1a,color:#fff,font-weight:bold
+
+    class DLP dlp
+    class B1,B2,B3 blind

@@ -49,8 +49,26 @@ The two graphics should be
 1. external threat actor attacking AI agent which then is a launchpad to the companies infrastructure
 2. Layers of defensive measures against AI
 
+### Post 3: Data Loss Prevention in an AI-first company
 
-### Post 3: Is something big really happening
+- DLP in most companies not completely solved
+- AI brings new challenges to DLP
+  - Data loss through prompts (e.g. when used for training)
+  - Data loss through web fetch, agent interaction
+  - Loss of confidentiality markers in RAG
+  - AI as "context mixer"
+  - Data loss through malicious AI exploits (see also previous article)
+- A new separation is needed
+  - What is in human responsibility
+  - What can be achieved by labelling and automation
+  - Where can AI help
+- Reactions have to become much faster and focused to get good results
+- What does that mean for:
+  - laptops?
+  - used SaaS offerings?
+  - interaction with customer's and supplier's systems?
+
+### Post 4: Is something big really happening
 Critical analysis of Matt Shumers post "Something big is happening"
 - What he says
 - What is hype and what is reality

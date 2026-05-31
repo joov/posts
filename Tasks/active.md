@@ -13,6 +13,8 @@ Tasks currently in progress.
 
 - [ ] Post 2: "Something dangerous is happening" - Started: 2026-03-28
   - Next step: `/review` to review and finalize
+- [ ] Post 3: "The DLP Blind Spot" - Started: 2026-05-24
+  - Next step: `/collect` to gather knowledge and sources
 
 ## Blocked
 

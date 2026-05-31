@@ -25,6 +25,7 @@ compatibility: opencode
 - Use Mermaid `classDef` and `class` to apply colors — earth tones for first graph, cool blues for second graph, neutral/contrast for third
 - Add a short comment at the top of each file describing what the graph shows
 - Use `%%` for comments in Mermaid
+- Exclusively use <br> for line breaks in elements
 
 ## When to use me
 
