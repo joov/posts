@@ -68,7 +68,39 @@ The two graphics should be
   - used SaaS offerings?
   - interaction with customer's and supplier's systems?
 
-### Post 4: Is something big really happening
+### Post 4: How to evolve Entrprise AI
+
+Agentic AI usage is typically brought forward by single individuals in a company.
+Typical patterns are (this list should not appeare 1-1, but more generalized):
+
+- I solve my problem, not yours
+- I know tools, that you do not have
+- I am a softare developer, therefore I can use tools, that you cannnot
+- I am the boss so I get my AI subscription and you don't
+- I know the workarounds to use my shadow AI tools in the company, but you don't
+- We use AI tools for single purposes only, not to optimize or automate processes
+- We use so many AI tools, knowbody as an overview any more
+
+Results are: Some individuals do brilliant things with AI, but the department or company as a whole does not 
+benefit. Furthermore AI governance (especially the number of tools used) and information security erode.
+
+A company can scale in AI usage only, if it gets from the "single individuals use AI best for them"-stage
+to the "everyone benefits from the AI evolution"-stage as fast as possible.
+
+What are the reasons, that it does not work? What are the best ways, to get it working?
+What should a CEO have in mind, to evolve the use of AI in the enterprise in the best way possible?
+
+Please start by looking into this podcast transcript: https://docs.google.com/document/d/1mtKVgpk3QT04bTDyakDanmOzR-TsbSxW5zLCNOk3Z3M
+
+Possible solutions might be
+
+- Implement an AI Center of Excellence
+- Make a comprehensive list of all AI used in the company
+- get a strategy consultant to carve out your AI strategy
+- Get AI professionals to train your key personel "on the job", who then act as multipliers
+- get an AI "All in One"-solution, to solve your problems
+
+### Post 5: Is something big really happening
 Critical analysis of Matt Shumers post "Something big is happening"
 - What he says
 - What is hype and what is reality

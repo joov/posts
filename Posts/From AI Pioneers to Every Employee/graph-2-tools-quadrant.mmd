@@ -1,0 +1,31 @@
+%% Graph 2: AI Tools — Ease of Use vs. Enterprise Readiness
+%% X-axis: Ease of Use = full workflow ease (setup + sharing + integration + maintenance)
+%%          NOT just "easy to start" — reflects real-world friction to get to a useful, connected, shared result
+%% Y-axis: Enterprise Readiness = governed, shareable, compliant, auditable
+%%
+%% Key insight: Copilot M365 and Copilot Studio move LEFT because
+%%   - sharing agents is clunky
+%%   - connecting to external data requires admin rights
+%%   - documentation is perpetually outdated
+%%   - full workflow ease is low despite a simple entry experience
+%%
+%% The "Translation Layer" (top-right) is the target model — not a single product,
+%%   but the pattern where a frontend engineer wraps pioneer workflows into governed, accessible tooling.
+
+quadrantChart
+    title AI Tools: Ease of Use vs. Enterprise Readiness
+    x-axis "Requires Expertise" --> "Accessible to All Employees"
+    y-axis "Individual · Ungoverned" --> "Governed · Shareable · Compliant"
+    quadrant-1 Enterprise Zone
+    quadrant-2 Controlled but Complex
+    quadrant-3 Pioneer Zone
+    quadrant-4 Easy but Risky
+
+    OpenCode: [0.08, 0.10]
+    Claude Code: [0.13, 0.18]
+    Claude Desktop / Hermes: [0.18, 0.12]
+    ChatGPT Enterprise: [0.52, 0.48]
+    Dust: [0.58, 0.62]
+    Copilot Studio: [0.30, 0.72]
+    Microsoft Copilot M365: [0.35, 0.82]
+    Translation Layer ✦: [0.85, 0.88]

@@ -15,6 +15,8 @@ Tasks currently in progress.
   - Next step: `/review` to review and finalize
 - [ ] Post 3: "The DLP Blind Spot" - Started: 2026-05-24
   - Next step: `/collect` to gather knowledge and sources
+- [ ] "From AI Pioneers to Every Employee" - Started: 2026-06-06
+  - Next step: `/review` to review and finalize
 
 ## Blocked
 
